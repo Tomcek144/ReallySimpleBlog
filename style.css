@@ -1,0 +1,296 @@
+body 
+{
+	margin: 20px;
+ 	/*background-image: url("http://2.bp.blogspot.com/_2UbsSBz9ckE/Sq7DJEShK5I/AAAAAAAAAPw/jD3l9OQzOUQ/s1600/1920x1080_HD_wallpaper_waterfall_nature.jpg");*/
+	background-color: #222222;
+	font-family: "Meiryo UI", Ubuntu, Verdana;
+}
+
+a:link { color: #EEEEEE; text-decoration: none; font-weight: bold; }
+a:active { color: #EEEEEE; text-decoration: none; }
+a:visited { color: #EEEEEE; text-decoration: none; }
+a:hover { color: #DDDDDD; text-decoration: underline; }
+
+img { border: 0; }
+
+.dummy
+{
+	height: auto;
+	width: 70%;
+	margin: auto;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 0 0 10px 10px #111111;
+}
+
+.header
+{
+  	height: 110px;
+	width: 500px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 15px;
+  	padding-left: 10px;
+  	padding-top: 10px;
+  	padding-bottom: 20px;
+	text-align: center;
+  	color: white;
+	background: #666666;
+	box-shadow: 0 0 100px 80px #666666;
+}
+
+.menu 
+{ 	
+  	height: 55px;
+  	background-color: #EEEEEE;
+  	opacity: 0.9;
+	width: auto;
+}
+
+.menu a { text-decoration: none; }
+.menu a:hover { cursor: pointer; }
+
+.menu_nav
+{
+	height: 20px;
+	width: auto;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	color: white;
+	background-color: #111111;
+	opacity: 1;
+}
+
+.menu_nav img { box-shadow: 0px 0px 0px 0px; }
+
+.menu_nav-text { margin-left: 5px; margin-right: 5px; }
+.menu_nav-text a:link { color: black; text-decoration: none; font-weight: normal; }
+.menu_nav-text a:active { color: black; text-decoration: none; font-weight: normal; }
+.menu_nav-text a:visited { color: black; text-decoration: none; font-weight: normal; }
+.menu_nav-text a:hover { color: grey; text-decoration: none; font-weight: bold; }
+
+.home
+{
+  	height: auto;
+	background-color: #555555;
+	color: white;
+  	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	opacity: 0.8;
+}
+.home h1 {
+    margin: -2px 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 21px;
+    color: #e6deaf;
+}
+.home h2 {
+    margin: -2px 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 13px;
+    color: #fff;
+}
+.home h3 {
+    display: inline;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #f6deaf;
+}
+.home p {
+    font-size: 12px;
+    /* text-indent: 12px; */ 
+    text-align: justify;
+}
+.home ul {
+    font-size: 12px;
+}
+.home a {
+	text-decoration: underline;
+}
+
+.impress
+{
+  	height: 250px;
+	background-color: #555555;
+	color: white;
+  	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	opacity: 0.8;
+}
+
+.about
+{
+  	height: 250px;
+	background-color: #555555;
+	color: white;
+  	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	opacity: 0.8;
+}
+
+.inhalt-likes
+{
+	background-color: #EEEEEE;
+	min-height: 50px;
+	color: white;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	opacity: 0.8;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.footer
+{
+	height: auto;
+	margin: auto;
+	margin-top: 15px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-height: 30px;
+	width: 350px ;
+	background-color: #444444;
+	color: white;
+	opacity: 0.8;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 10px #111111;
+}
+
+.head1
+{
+	font-size:200%;
+    color: #FFFFFF;
+    font-weight: bold;
+	font-family: "Coming Soon", "Comic Sans MS", Calibri, Ubuntu, Arial; 
+	text-shadow: 4px 4px 4px #aaa;
+}
+
+.head2
+{
+	font-size:200%;
+    color: #FFFFFF;
+   	font-weight: bold;
+	font-family: "Ubuntu", "Comic Sans MS", Calibri, Arial; 
+	text-shadow: 4px 4px 4px #aaa;
+	text-align: center; 
+}
+
+.head3
+{
+	font-size:200%;
+    color: #FFFFFF;
+    font-weight: bold;
+	font-family: "Special Elite", "Comic Sans MS", Calibri, Ubuntu, Arial; 
+	text-shadow: 4px 4px 4px #aaa;
+	text-align: center; 
+}
+
+.special
+{
+	font-family: "Ubuntu", "Coming Soon", "Verdana";
+	font-size: xx-large;
+	text-shadow: 4px 4px 4px #aaa;
+}
+
+.special_elite
+{
+	font-family: "Special Elite";
+	font-size: xx-large;
+	text-shadow: 4px 4px 4px #aaa;
+}
+
+.center
+{
+	margin: auto;
+	text-align: center;
+}
+
+.specialtext
+{
+	width: 98%;
+	height: auto;
+	background-color: #333333;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	box-shadow: 4px 4px 10px 6px white;
+}
+
+#japanese
+{
+	font-family: "Meiryo UI";
+}
+
+/*
+ * --> General Layout <--
+ */
+
+.whole {
+    width: 100%;
+    height: auto;
+}
+
+/*
+ * --> LOGIN STYLES <--
+ */
+
+.dummy-login
+{
+	height: auto;
+	width: 20%;
+	margin: auto;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 0 0 10px 10px #111111;
+}
+
+.menu-login
+{ 	
+  	height: 30px;
+  	background-color: #EEEEEE;
+  	opacity: 0.9;
+}
+
+.login
+{
+  	height: 110px;
+	background-color: #555555;
+	color: white;
+  	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	opacity: 0.8;
+}
+
+.specialtext-login
+{
+	font-family: "Meiryo UI", "Ubuntu", "Coming Soon", "Verdana";
+	font-size: 40pt;
+	text-shadow: 4px 4px 4px #aaa;
+}
+
+.newblogentry
+{
+  	height: auto;
+	background-color: #555555;
+	color: white;
+  	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	opacity: 0.8;
+}
