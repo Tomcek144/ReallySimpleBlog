@@ -91,13 +91,11 @@ $('#backward').click(function() {
 });
 
 $('#home').click(function() {
-	if (currPage == "about") 
-	{ 
+	if (currPage == "about") { 
 		$('.about').slideUp("slow");
 		$('#about').css("font-weight","normal");			
 	} 
-	else if (currPage == "impress") 
-	{
+	else if (currPage == "impress") {
 		$('.impress').slideUp("slow"); 
 		$('#impress').css("font-weight","normal");	
 	}
@@ -107,13 +105,11 @@ $('#home').click(function() {
 });
 
 $('#about').click(function() {
-	if (currPage == "home") 
-	{ 
+	if (currPage == "home") { 
 		$('.home').slideUp("slow"); 
 		$('#home').css("font-weight","normal");	
 	} 
-	else if (currPage == "impress") 
-	{
+	else if (currPage == "impress") {
 		$('.impress').slideUp("slow"); 
 		$('#impress').css("font-weight","normal");	
 	}
@@ -123,13 +119,11 @@ $('#about').click(function() {
 });
 
 $('#impress').click(function() {
-	if (currPage == "home") 
-	{ 
+	if (currPage == "home") { 
 		$('.home').slideUp("slow"); 
 		$('#home').css("font-weight","normal");	
 	} 
-	else if (currPage == "about") 
-	{
+	else if (currPage == "about") {
 		$('.about').slideUp("slow"); 
 		$('#about').css("font-weight","normal");	
 	}
@@ -145,3 +139,27 @@ window.___gcfg = {lang: 'en-GB'};
 	po.src = 'https://apis.google.com/js/plusone.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 })();
+
+// AJAX Sample for my Homepage
+// For now I'm not going to use it. Handle with CARE! :D
+function showPage(page) {
+	if (page = "") {
+		document.getElementById("homeContent").innerHTML = "<b>WHAT THE HELL DID YOU DO?!?</b>";
+	}
+	
+	if (window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	}
+	else {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			document.getElementById("homeContent").innerHTML = xmlhttp.responseText;
+		}
+	}
+	
+	xmlhttp.open("GET", "newblogpost.php", true);
+	xmlhttp.send();
+}

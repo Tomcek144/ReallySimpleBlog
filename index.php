@@ -79,7 +79,7 @@ include('config.inc');
 			</div>
 		</div>
 		
-		<div class="home">
+		<div class="home" id="homeContent">
 			<?php
 			$count_rows = mysql_num_rows(mysql_query("SELECT * FROM posts"));
 			for ($i = 1; $i < $count_rows + 1; $i++)
