@@ -4,6 +4,7 @@ by Thomas Siladi
 
 You have the RIGHT to use it for your own needs. (Except the songs-Folder, it has it's own README)
 
+You have to create an MySQL Database + a config.inc File to use this Software!
 config.inc:
 <?php
  
