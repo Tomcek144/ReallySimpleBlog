@@ -38,22 +38,34 @@ if (isset($_POST['send']) AND $_POST['title'] != "" AND $_POST['content'] != "")
 	
 	<div class="dummy">
 		<div class="menu">
-			<div class="menu_nav"><a href="../index.html"><img src="../flags/gb.png" alt=""></a><b>NAVIGATION</b></div>
+			<div class="menu_nav">
+				<div style="float: left;">
+					<a href="../index.html"><img src="../flags/gb.png" alt=""></a><b>NAVIGATION</b>
+				</div>
+				<div style="float: right;">
+					<?php
+					if (isset($_SESSION['role']) AND $_SESSION['role'] == "admin")
+					{
+						?><a href="./logout.php">LOGOUT</a><?php
+					}
+					else
+					{
+						?><a href="./login.php">LOGIN</a><?php
+					}
+					?>
+				</div>
+			</div>
 			<div class="menu_nav-text">
 				<div style="float: left;">
 					<a href="./index.php">GO BACK TO HOMEPAGE</a>
 				</div>
 				<div style="float: right;">
-				<?php
-				if (isset($_SESSION['role']) AND $_SESSION['role'] == "admin")
-				{
-					?><a href="./logout.php">LOGOUT</a><?php
-				}
-				else
-				{
-					?><a href="./login.php">LOGIN</a><?php
-				}
-				?>
+					<!-- Audio Stuff... --> 
+					<audio id="player"></audio>
+					<label id="song">「LA ROUX - BULLETPROOF」</label>&nbsp;&nbsp;
+					<a href="#" id="play">PLAY</a> |
+					<a href="#" id="backward">&lt;&lt;</a> |
+					<a href="#" id="forward">>></a>
 				</div>
 			</div>
 		</div>

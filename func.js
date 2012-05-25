@@ -141,12 +141,8 @@ window.___gcfg = {lang: 'en-GB'};
 })();
 
 // AJAX Sample for my Homepage
-// For now I'm not going to use it. Handle with CARE! :D
-function showPage(page) {
-	if (page = "") {
-		document.getElementById("homeContent").innerHTML = "<b>WHAT THE HELL DID YOU DO?!?</b>";
-	}
-	
+// It doesn't function right. I will use this in an another Project.
+function showNewEntryPage(page) {
 	if (window.XMLHttpRequest) {
 		xmlhttp = new XMLHttpRequest();
 	}
@@ -156,10 +152,15 @@ function showPage(page) {
 	
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			document.getElementById("homeContent").innerHTML = xmlhttp.responseText;
+			document.getElementById("mainDIV").innerHTML = xmlhttp.responseText;
 		}
 	}
 	
-	xmlhttp.open("GET", "newblogpost.php", true);
+	if (page == "home") {
+		xmlhttp.open("GET", "index.php", true);
+	}
+	else if (page == "newblogentry") {
+		xmlhttp.open("GET", "newblogentry.php", true);
+	}
 	xmlhttp.send();
 }

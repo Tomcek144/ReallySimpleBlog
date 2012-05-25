@@ -38,7 +38,7 @@ include('config.inc');
 		<img src="./WEBandDESIGN.png" alt="LOGO">
 	</div>
 	
-	<div class="dummy">
+	<div class="dummy" id="mainDIV">
 		<div class="menu">
 			<div class="menu_nav">
 				<div style="float: left;">
@@ -48,7 +48,7 @@ include('config.inc');
 					<?php
 					if ($_SESSION['role'] == "admin")
 					{
-						echo "<a href='./newblogentry.php'>CREATE A NEW BLOG ENTRY</a>&nbsp;|&nbsp;";
+						?><a href='./newblogentry.php'>CREATE A NEW BLOG ENTRY</a>&nbsp;|&nbsp;<?php
 					}
 					
 					if (isset($_SESSION['role']))
@@ -79,7 +79,7 @@ include('config.inc');
 			</div>
 		</div>
 		
-		<div class="home" id="homeContent">
+		<div class="home">
 			<?php
 			$count_rows = mysql_num_rows(mysql_query("SELECT * FROM posts"));
 			for ($i = 1; $i < $count_rows + 1; $i++)
