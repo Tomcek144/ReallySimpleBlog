@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Browser Detect Test</title>
+	<script src="./browserdetect.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	
+	<script>
+		txt = "<p>";
+		txt += "Browser: ";
+		txt += BrowserDetect.browser;
+		txt += "<br>";
+		txt += "Version: ";
+		txt += BrowserDetect.version;
+		txt += "<br>";
+		txt += "OS: ";
+		txt += BrowserDetect.OS;
+		txt += "</p>";
+		
+		document.getElementById("example").innerHTML = txt;
+	</script>
+</body>
+</html>

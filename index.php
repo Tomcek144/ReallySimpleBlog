@@ -25,7 +25,7 @@ include('config.inc');
 		};
 
 		// Load the SDK Asynchronously
-		(function(d){
+		(function(d) {
 			var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 			if (d.getElementById(id)) {return;}
 			js = d.createElement('script'); js.id = id; js.async = true;
@@ -48,7 +48,7 @@ include('config.inc');
 					<?php
 					if ($_SESSION['role'] == "admin")
 					{
-						?><a href='./newblogentry.php'>CREATE A NEW BLOG ENTRY</a>&nbsp;|&nbsp;<?php
+						?><a href='#' id='newBlogEntry'>CREATE A NEW BLOG ENTRY</a>&nbsp;|&nbsp;<?php
 					}
 					
 					if (isset($_SESSION['role']))
@@ -70,7 +70,7 @@ include('config.inc');
 				</div>
 				<div style="float: right;">
 					<!-- Audio Stuff... --> 
-					<audio id="player"></audio>
+					<audio id="player">Pff... No Support in this Browser</audio>
 					<label id="song">「LA ROUX - BULLETPROOF」</label>&nbsp;&nbsp;
 					<a href="#" id="play">PLAY</a> |
 					<a href="#" id="backward">&lt;&lt;</a> |
@@ -82,12 +82,17 @@ include('config.inc');
 		<div class="home">
 			<?php
 			$count_rows = mysql_num_rows(mysql_query("SELECT * FROM posts"));
-			for ($i = 1; $i < $count_rows + 1; $i++)
+			for ($i = $count_rows; $i > 0; $i--)
 			{
 				$post = mysql_fetch_array(mysql_query("SELECT title, content, author, date FROM posts WHERE id=" . $i));
 				
 				echo "<h1>" . $post['title'] . "</h1>\n";
-				echo "<h2><i>" . $post['date'] . "</i>&nbsp;|&nbsp;" . $post['author'] . " wrote this post.</h2><hr>\n";
+				echo "<h2><i>" . $post['date'] . "</i>&nbsp;|&nbsp;" . $post['author'] . " wrote this post. ";
+				if ($_SESSION['role'] == "admin")
+				{
+					echo "<a href='removeblogentry.php?id=" . $i . "'>Delete</a>";
+				}
+				echo "</h2><hr>\n";
 				echo $post['content'] . "\n";
 			}
 			?>
@@ -99,6 +104,27 @@ include('config.inc');
 			(C) 2012 Thomas Siladi<br>
 			Austria / Croatia<br>
 			<a href="mailto:thomas.siladi@gmail.com">thomas.siladi@gmail.com</a>
+		</div>
+		
+		<div class="newBlogEntry">
+		<?php
+		if (isset($_SESSION['role']) AND $_SESSION['role'] == "admin")
+		{
+		?>
+			<div class="newblogentry">
+				Title: <br>
+				<input type="text" name="title"><br>
+				Content:<br>
+				<textarea name="content" cols="103" rows="10"><p>Write your stuff here. :D</p></textarea>
+				<input type="submit" name="send" onClick="" value="POST IT!">
+			</div>
+		<?php
+		}
+		else
+		{
+			echo "<div class='newblogentry'><span class='specialtext-login'>You have<br> <b>NO RIGHTS</b> to post<br> a Blog Post!</span></div>";
+		}
+		?>
 		</div>
 		
 		<div class="about">
@@ -116,11 +142,13 @@ include('config.inc');
 		
 	<div class="footer">
 		<div class="center">
-			<i>© 2012 Thomas Siladi. All Right Reserved.</i>
+			<i>© 2012 Thomas Siladi. All Right Reserved.</i><br>
+			You are using <span id="myBrowser"></span> on <span id="myOS"></span>!
 		</div>
 	</div>
 	
 	<!-- All the other JavaScript-Stuff are in a seperate File. -->
+	<script src="./browserdetect.js"></script>
 	<script src="./func.js"></script>
 </body>
 </html>
